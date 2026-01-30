@@ -4,7 +4,7 @@ import PageContainer from './components/layout/PageContainer.jsx';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/autoscout-clone">
       <PageContainer>
         <Routes>
           {routes.map((r) => (

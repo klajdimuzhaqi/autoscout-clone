@@ -5,12 +5,11 @@ import Button from "react-bootstrap/Button";
 export default function MostWantedCard({ car }) {
     return (
         <Card className="as-card shadow-sm border-0 h-100 overflow-hidden">
-            {/* IMAGE */}
+           
             <div className="as-card-imgwrap">
                 <img className="as-card-img" src={car.image} alt={car.title} />
             </div>
 
-            {/* CONTENT */}
             <Card.Body className="d-flex flex-column">
                 <div className="as-card-title">
                     <span className="fw-bold">{car.title.split(" ")[0]}</span>{" "}
