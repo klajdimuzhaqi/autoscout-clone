@@ -7,7 +7,7 @@ export default function TopNav() {
         <Navbar bg="dark" variant="dark" className="py-2">
             <Container>
                 <Navbar.Brand className="fw-bold">
-                    <span className="bg-warning text-dark px-2 py-1 me-2">Auto</span>
+                    <span className="bg-white text-dark px-2 py-1 me-2">Auto</span>
                     Scout24
                 </Navbar.Brand>
 

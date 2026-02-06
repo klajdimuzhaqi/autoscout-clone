@@ -6,3 +6,4 @@ export const bodyTypes = [
     { key: 'van', label: 'Van', icon: 'bi-bus-front' },
     { key: 'sedan', label: 'Sedan', icon: 'bi-car-front' },
 ];
+

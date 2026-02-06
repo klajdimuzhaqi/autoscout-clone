@@ -95,7 +95,7 @@ export default function SearchForm() {
 
                 <Col md={3} className="d-grid">
                     <Button type="submit" size="lg">
-                        2,033,906 results
+                        100 results
                     </Button>
                 </Col>
             </Row>

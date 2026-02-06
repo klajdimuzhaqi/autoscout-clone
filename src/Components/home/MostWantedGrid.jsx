@@ -7,7 +7,7 @@ export default function MostWantedGrid() {
     return (
         <Row className="g-3">
             {mockCars.map((car) => (
-                <Col key={car.id} xs={12} lg={3}>
+                <Col key={car.id} xs={12} lg={3} md={6}>
                     <MostWantedCard car={car} />
                 </Col>
             ))}

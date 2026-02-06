@@ -2,6 +2,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 
+
 export default function CarResultCard({ car }) {
     return (
         <Card className="shadow-sm border-0 mb-3 overflow-hidden">
