@@ -1,11 +1,18 @@
 import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 export default function MostWantedCard({ car }) {
+    const offerUrl = `/offers/${car.id}`;
+
     return (
-        <Card className="as-card shadow-sm border-0 h-100 overflow-hidden">
-           
+        <Card
+            as={Link}
+            to={offerUrl}
+            className="as-card shadow-sm border-0 h-100 overflow-hidden"
+            style={{ textDecoration: "none", color: "inherit" }}
+        >
             <div className="as-card-imgwrap">
                 <img className="as-card-img" src={car.image} alt={car.title} />
             </div>
@@ -32,7 +39,14 @@ export default function MostWantedCard({ car }) {
                         <div className="small">{car.location}</div>
                     </div>
 
-                    <Button variant="outline-secondary" className="as-save-btn">
+                    <Button
+                        variant="outline-secondary"
+                        className="as-save-btn"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }}
+                    >
                         <i className="bi bi-star"></i>
                     </Button>
                 </div>

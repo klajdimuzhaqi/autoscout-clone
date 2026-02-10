@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { routes } from './app/routes.jsx';
-import PageContainer from './components/layout/PageContainer.jsx';
+import PageContainer from './Components/layout/PageContainer.jsx';
 
 export default function App() {
   return (

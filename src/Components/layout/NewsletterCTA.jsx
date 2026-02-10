@@ -1,10 +1,16 @@
+import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Container, Row, Col, Form, Button, Card, Alert } from "react-bootstrap";
 import x7Image from "../../assets/cars/x7.jpg";
 import "./newsletter-cta.css";
 
-
 export default function NewsletterCTA() {
+    const location = useLocation();
+    const hideOnDetails = location.pathname.startsWith("/offers");
+
+    // 👉 MOS e shfaq newsletter-in te faqja e detajeve
+    if (hideOnDetails) return null;
+
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState({ type: "", msg: "" });
 
@@ -35,7 +41,10 @@ export default function NewsletterCTA() {
                                 për makina të përdorura.
                             </p>
 
-                            <Form onSubmit={onSubmit} className="d-flex gap-2 flex-column flex-sm-row">
+                            <Form
+                                onSubmit={onSubmit}
+                                className="d-flex gap-2 flex-column flex-sm-row"
+                            >
                                 <Form.Control
                                     type="email"
                                     placeholder="Email address"
@@ -48,11 +57,11 @@ export default function NewsletterCTA() {
                                 </Button>
                             </Form>
 
-                            {status.msg ? (
+                            {status.msg && (
                                 <Alert className="mt-3 mb-0" variant={status.type}>
                                     {status.msg}
                                 </Alert>
-                            ) : null}
+                            )}
 
                             <small className="text-muted d-block mt-3">
                                 By submitting, you agree to receive the newsletter. You can revoke

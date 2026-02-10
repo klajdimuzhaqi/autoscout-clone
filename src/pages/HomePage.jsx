@@ -1,6 +1,6 @@
-import SearchPanel from '../components/search/SearchPanel.jsx';
-import BodyTypeGrid from '../components/home/BodyTypeGrid.jsx';
-import MostWantedGrid from "../components/home/MostWantedGrid.jsx";
+import SearchPanel from '../Components/search/SearchPanel.jsx';
+import BodyTypeGrid from '../Components/home/BodyTypeGrid.jsx';
+import MostWantedGrid from "../Components/home/MostWantedGrid.jsx";
 
 
 export default function HomePage() {
