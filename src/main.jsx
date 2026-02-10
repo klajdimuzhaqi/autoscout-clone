@@ -7,8 +7,6 @@ import App from './App.jsx';
 import "./styles/autoscout.css";
 import "./styles/marquee.css";
 
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

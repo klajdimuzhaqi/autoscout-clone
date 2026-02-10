@@ -1,9 +1,10 @@
+// src/utils/favorites.js
 
 const STORAGE_KEY = "autoscout:favorites";
 
-
-  @returns {Array<Object>} list of saved car objects
- 
+/**
+ * @returns {Array<Object>} list of saved car objects
+ */
 export function getFavorites() {
     try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -14,26 +15,28 @@ export function getFavorites() {
     }
 }
 
-
-  @param {Array<Object>} favorites
- 
+/**
+ * @param {Array<Object>} favorites
+ */
 function setFavorites(favorites) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
     // notify the app that favorites changed
     window.dispatchEvent(new Event("favoritesUpdated"));
 }
 
-
- @param {number|string} carId
-
+/**
+ * @param {number|string} carId
+ */
 export function isFavorite(carId) {
     const id = Number(carId);
     return getFavorites().some((c) => Number(c?.id) === id);
 }
 
-  @param {Object} car
-  @returns {Array<Object>} updated favorites
- 
+/**
+ * Adds or removes a car from favorites.
+ * @param {Object} car
+ * @returns {Array<Object>} updated favorites
+ */
 export function toggleFavorite(car) {
     if (!car || car.id == null) return getFavorites();
 
@@ -44,6 +47,7 @@ export function toggleFavorite(car) {
     const next = exists
         ? current.filter((c) => Number(c?.id) !== id)
         : [
+            // keep the object stable but avoid weird undefined fields
             { ...car, id },
             ...current,
         ];
@@ -52,9 +56,9 @@ export function toggleFavorite(car) {
     return next;
 }
 
-
-  @param {number|string} carId
- 
+/**
+ * @param {number|string} carId
+ */
 export function removeFavorite(carId) {
     const id = Number(carId);
     const next = getFavorites().filter((c) => Number(c?.id) !== id);

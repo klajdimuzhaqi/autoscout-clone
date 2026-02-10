@@ -2,9 +2,20 @@ import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { FaStar, FaRegStar } from "react-icons/fa";
+
+import { isFavorite, toggleFavorite } from "../../utils/favorites.js";
 
 export default function MostWantedCard({ car }) {
     const offerUrl = `/offers/${car.id}`;
+    const [saved, setSaved] = useState(isFavorite(car.id));
+
+    useEffect(() => {
+        const sync = () => setSaved(isFavorite(car.id));
+        window.addEventListener("favoritesUpdated", sync);
+        return () => window.removeEventListener("favoritesUpdated", sync);
+    }, [car.id]);
 
     return (
         <Card
@@ -45,9 +56,13 @@ export default function MostWantedCard({ car }) {
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
+                            toggleFavorite(car);
+                            setSaved(isFavorite(car.id));
                         }}
+                        aria-label={saved ? "Remove from favourites" : "Add to favourites"}
+                        title={saved ? "Saved" : "Save"}
                     >
-                        <i className="bi bi-star"></i>
+                        {saved ? <FaStar color="#f5c518" /> : <FaRegStar />}
                     </Button>
                 </div>
             </Card.Body>

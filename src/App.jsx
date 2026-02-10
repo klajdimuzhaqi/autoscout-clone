@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { routes } from './app/routes.jsx';
-import PageContainer from './Components/layout/PageContainer.jsx';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { routes } from "./app/routes.jsx";
+import PageContainer from "./Components/layout/PageContainer.jsx";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/autoscout-clone">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <PageContainer>
         <Routes>
           {routes.map((r) => (
