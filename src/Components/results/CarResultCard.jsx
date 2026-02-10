@@ -4,7 +4,7 @@ import Badge from "react-bootstrap/Badge";
 import { Link } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useEffect, useState } from "react";
-
+import { isFavorite, toggleFavorite } from "../../utils/favorites.js";
 
 export default function CarResultCard({ car }) {
     const offerUrl = `/offers/${car.id}`;
