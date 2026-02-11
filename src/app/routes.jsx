@@ -15,7 +15,6 @@ export const routes = [
     { path: "/offers/:id", element: <CarDetailsPage /> },
     { path: "*", element: <NotFoundPage /> },
     { path: "/motorbikes", element: <MotorbikesPage /> },
-    { path: "/motorbikes", element: <MotorbikesPage /> },
     { path: "/motorbikes/:id", element: <MotorbikeDetailsPage /> },
 ];
 
