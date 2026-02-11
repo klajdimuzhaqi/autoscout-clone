@@ -20,9 +20,10 @@ export default function TopNav() {
                         <Nav.Link as={Link} to="/results">
                             Used and New Cars
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/results">
+                        <Nav.Link as={Link} to="/motorbikes">
                             Motorbikes
                         </Nav.Link>
+
                     </Nav>
 
                     <Nav className="mt-2 mt-lg-0 d-flex flex-column flex-lg-row align-items-center align-items-lg-center text-center text-lg-start">
