@@ -8,7 +8,6 @@ export default function NewsletterCTA() {
     const location = useLocation();
     const hideOnDetails = location.pathname.startsWith("/offers");
 
-    // 👉 MOS e shfaq newsletter-in te faqja e detajeve
     if (hideOnDetails) return null;
 
     const [email, setEmail] = useState("");

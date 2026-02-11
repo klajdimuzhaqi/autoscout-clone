@@ -39,7 +39,7 @@ export default function TopNav() {
             expand="lg"
             sticky="top"
             collapseOnSelect
-            className="border-bottom border-dark-subtle shadow-sm"
+            className="border-bottom border-dark-subtle shadow-sm py-3"
         >
             <Container fluid="lg">
                 <Navbar.Brand as={Link} to="/" className="fw-bold d-flex align-items-center gap-2">
@@ -52,38 +52,42 @@ export default function TopNav() {
                 <Navbar.Toggle aria-controls="main-nav" aria-label="Toggle navigation" />
 
                 <Navbar.Collapse id="main-nav" className="mt-3 mt-lg-0">
-                   
                     <Nav className="me-auto gap-lg-1">
                         {NAV_LINKS.map((l) => (
                             <AppNavLink key={l.to} to={l.to} label={l.label} />
                         ))}
                     </Nav>
 
-                    <Nav className="ms-lg-3 align-items-lg-center gap-1 gap-lg-2">
-                        <Nav.Link
-                            as={NavLink}
-                            to="/favorites"
-                            className={({ isActive }) =>
-                                [
-                                    "px-lg-3",
-                                    "py-2",
-                                    "d-inline-flex",
-                                    "align-items-center",
-                                    "gap-2",
-                                    "rounded-2",
-                                    isActive ? "active fw-semibold" : "opacity-75",
-                                ].join(" ")
-                            }
-                            aria-label="Favorites"
+                    <Nav className="ms-lg-3 align-items-lg-center gap-2">
+
+                        <NavLink
+                            to="/login"
+                            className="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 text-light"
                         >
-                            <i className="bi bi-star" aria-hidden="true" />
-                            <span className="d-lg-none">Favorites</span>
-                        </Nav.Link>
+                            <i className="bi bi-box-arrow-in-right" />
+                            Login
+                        </NavLink>
+
+                        <NavLink
+                            to="/register"
+                            className="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 text-light"
+                        >
+                            <i className="bi bi-person-plus" />
+                            Register
+                        </NavLink>
+
+                        <NavLink
+                            to="/favorites"
+                            className="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 text-light"
+                        >
+                            <i className="bi bi-star" />
+                            Saved
+                        </NavLink>
 
                         <NavDropdown
                             title={
                                 <span className="d-inline-flex align-items-center gap-2">
-                                    <i className="bi bi-globe2" aria-hidden="true" />
+                                    <i className="bi bi-globe2" />
                                     <span className="opacity-75">EN</span>
                                 </span>
                             }
