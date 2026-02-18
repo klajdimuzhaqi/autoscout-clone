@@ -10,6 +10,7 @@ import { isFavorite, toggleFavorite } from "../../utils/favorites.js";
 export default function MostWantedCard({ car }) {
     const offerUrl = `/offers/${car.id}`;
     const [saved, setSaved] = useState(isFavorite(car.id));
+    
 
     useEffect(() => {
         const sync = () => setSaved(isFavorite(car.id));
