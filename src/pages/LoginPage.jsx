@@ -38,7 +38,7 @@ export default function LoginPage() {
                         </Form.Group>
 
                         <div className="d-grid gap-2">
-                            <Button type="submit" variant="primary" size="lg">
+                            <Button type="submit" variant="dark" size="lg">
                                 Sign In
                             </Button>
                         </div>

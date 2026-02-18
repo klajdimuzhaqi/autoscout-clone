@@ -44,8 +44,7 @@ export default function TopNav() {
             <Container fluid="lg">
                 <Navbar.Brand as={Link} to="/" className="fw-bold d-flex align-items-center gap-2">
                     <span>
-                        Shqiponja<span className="opacity-75">Mbi</span>
-                        <span className="opacity-75">Rrota</span>
+                        Auto<span className="opacity-75">Scout</span>
                     </span>
                 </Navbar.Brand>
 
@@ -84,6 +83,14 @@ export default function TopNav() {
                             Saved
                         </NavLink>
 
+                        <NavLink
+                            to="/controlpanel"
+                            className="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 text-light"
+                        >
+                            <i className="bi bi-menu-button"></i>
+                            Control Panel
+                        </NavLink>
+ 
                         <NavDropdown
                             title={
                                 <span className="d-inline-flex align-items-center gap-2">

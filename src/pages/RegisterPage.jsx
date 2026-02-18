@@ -56,7 +56,7 @@ export default function RegisterPage() {
                         </Form.Group>
 
                         <div className="d-grid gap-2">
-                            <Button type="submit" variant="success" size="lg">
+                            <Button type="submit" variant="dark" size="lg">
                                 Create Account
                             </Button>
                         </div>

@@ -7,6 +7,7 @@ import MotorbikesPage from "../pages/MotorbikesPage.jsx";
 import MotorbikeDetailsPage from "../pages/MotorbikeDetailsPage.jsx";
 import LoginPage from "../pages/LoginPage.jsx";
 import RegisterPage from "../pages/RegisterPage.jsx";
+import OffcanvasExample from "../pages/ControlPanel.jsx";
 
 export const routes = [
     { path: "/", element: <HomePage /> },
@@ -17,5 +18,7 @@ export const routes = [
     { path: "/motorbikes/:id", element: <MotorbikeDetailsPage /> },
     { path: "/login", element: <LoginPage /> },
     { path: "/register", element: <RegisterPage /> },
+    { path: "/controlpanel", element: <OffcanvasExample /> },
     { path: "*", element: <NotFoundPage /> },
+
 ];

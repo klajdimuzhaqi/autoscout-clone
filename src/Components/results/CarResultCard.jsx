@@ -8,7 +8,6 @@ import { isFavorite, toggleFavorite } from "../../utils/favorites.js";
 
 export default function CarResultCard({ car }) {
     const offerUrl = `/offers/${car.id}`;
-
     const [saved, setSaved] = useState(isFavorite(car.id));
 
     useEffect(() => {

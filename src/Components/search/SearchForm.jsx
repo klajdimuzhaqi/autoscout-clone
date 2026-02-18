@@ -48,7 +48,7 @@ export default function SearchForm() {
                 </Col>
 
                 <Col md={3}>
-                    <Form.Select value={form.model} onChange={onChange('model')} disabled={!form.make}>
+                    <Form.Select value={form.model} onChange={onChange('model')}>
                         <option value="">Model</option>
                         <option>A3</option>
                         <option>A4</option>
