@@ -84,7 +84,7 @@ export default function TopNav() {
                         </NavLink>
 
                         <NavLink
-                            to="/controlpanel"
+                            to="/admin"
                             className="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2 text-light"
                         >
                             <i className="bi bi-menu-button"></i>

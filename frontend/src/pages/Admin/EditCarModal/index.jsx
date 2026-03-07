@@ -4,8 +4,8 @@ import { Modal, Button, Form } from 'react-bootstrap';
 const EditCar = ({ open, close }) => {
 
     return (
-        
-        
+
+
         <>
             <Modal show={open} onHide={close} animation={false}>
                 <Modal.Header closeButton>
